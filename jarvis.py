@@ -41,6 +41,7 @@ if __name__ == "__main__":
     wishMe()
     #while True:
     query = takeCommand().lower()
+    
     if 'wikipedia' in query:
         speak('searching wikipedia..')
         query = query.replace("wikipedia","")
@@ -48,10 +49,13 @@ if __name__ == "__main__":
         speak("according to wikipedia")
         print(result)
         speak(result)
+        
     elif 'youtube' in query:
         webbrowser.open('youtube.com')
+        
     elif 'google' in query:
         webbrowser.open('google.com')
+        
     elif 'the time' in query:
         strtime = datetime.datetime.now().strftime("%H:%M:%S")
         speak(f"Sir, the time is {strtime}")
